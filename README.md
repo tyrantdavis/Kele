@@ -1,6 +1,6 @@
 # Kele
 
-Welcome to your new gem **Kele!** 
+Welcome to your new gem! 
 
 **Kele** is a Ruby Gem API client.
 This is a Bloc project used to advance a students Ruby and 
