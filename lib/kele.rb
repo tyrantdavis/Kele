@@ -1,5 +1,6 @@
 require 'httparty'
 require 'kele/errors'
+require 'json'
 
 class Kele
   include HTTParty
@@ -10,6 +11,12 @@ class Kele
 
     @auth_token = response['auth_token'] || (raise 'Nil returned.')
   end
+
+  def get_me
+    response = self.class.get(base_url('users/me'), headers: { authorization: @auth_token } )
+    @data = JSON.parse(response.body)
+  end
+
 
   private
 
