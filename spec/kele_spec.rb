@@ -6,11 +6,6 @@ RSpec.describe Kele do
   end
 end
 
-#   it 'does something useful' do
-#     expect(false).to eq(true)
-#   end
-# end
-
 describe '#initialize' do
 
   it 'raises InvalidCredentials error' do
@@ -22,3 +17,45 @@ describe '#initialize' do
     expect(response.instance_variable_get(:@auth_token)).to be_a(String)
   end
 end
+
+describe '#get_me' do
+    it 'returns a hash' do
+        response = Kele.new(ENV['EMAIL'], ENV['PASSWORD'])
+        response.get_me
+        expect(response.instance_variable_get(:@data)).to be_a(Hash)
+    end
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
