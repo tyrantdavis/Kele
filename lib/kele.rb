@@ -17,14 +17,19 @@ class Kele
     @data = JSON.parse(response.body)
   end
 
-  def get_mentor_availability
-    response = self.class.get(base_url('mentors/539470/student_availability'), headers: {authorization: @auth_token})
+  def get_mentor_availability(mentor_id)
+    response = self.class.get(base_url("mentors/#{mentor_id}/student_availability"), headers: {authorization: @auth_token})
     @mentor_availability = JSON.parse(response.body)
   end
 
-  def get_roadmap
-    response = self.class.get(base_url('roadmaps/31'), headers: { authorization: @auth_token })
+  def get_roadmap(roadmap_id)
+    response = self.class.get(base_url("roadmaps/#{roadmap_id}"), headers: { authorization: @auth_token })
     @roadmap = JSON.parse(response.body)
+  end
+
+  def get_checkpoint(checkpoint_id)
+    response = self.class.get(base_url("checkpoints/#{checkpoint_id}"), headers: { authorization: @auth_token }) 
+    @checkpoint = JSON.parse(response.body)
   end
 
 
