@@ -1,9 +1,11 @@
 require 'httparty'
 require 'kele/errors'
+require 'kele/roadmap'
 require 'json'
 
 class Kele
   include HTTParty
+  include Roadmap
 
   def initialize(email, password)
     response = self.class.post(base_url('sessions'), body: {email: email, password: password} )
@@ -20,16 +22,6 @@ class Kele
   def get_mentor_availability(mentor_id)
     response = self.class.get(base_url("mentors/#{mentor_id}/student_availability"), headers: {authorization: @auth_token})
     @mentor_availability = JSON.parse(response.body)
-  end
-
-  def get_roadmap(roadmap_id)
-    response = self.class.get(base_url("roadmaps/#{roadmap_id}"), headers: { authorization: @auth_token })
-    @roadmap = JSON.parse(response.body)
-  end
-
-  def get_checkpoint(checkpoint_id)
-    response = self.class.get(base_url("checkpoints/#{checkpoint_id}"), headers: { authorization: @auth_token }) 
-    @checkpoint = JSON.parse(response.body)
   end
 
 
