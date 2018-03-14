@@ -1,10 +1,12 @@
 # Kele
+### Welcome to your new gem! 
 
-Welcome to your new gem! 
+![Keledemo](https://camo.githubusercontent.com/a9648fb2934b698a863c0e63937b1561c6b0c858/687474703a2f2f692e696d6775722e636f6d2f7073527a5050532e676966)
+--
+**Kele** is a __Ruby Gem API client__.
+This is a Bloc project used to advance Ruby and 
+RoR software development skills. It enables students to access [Bloc's API](http://docs.blocapi.apiary.io/#)
 
-**Kele** is a Ruby Gem API client.
-This is a Bloc project used to advance a students Ruby and 
-RoR software development skills. 
 
 
 ## Installation
@@ -23,9 +25,7 @@ Or install it yourself as:
 
     $ gem install kele
 
-## Usage
 
-TODO: Write usage instructions here
 
 ## Development
 
@@ -47,4 +47,6 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/Tyrant
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+
+
 
